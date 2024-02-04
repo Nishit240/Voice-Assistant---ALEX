@@ -32,10 +32,13 @@ def sptext():
 # print("End")
 
 def speechtx(x):
+    # init() is a class and this class has this function getProperty and setProperty
     engine = pyttsx3.init()
+    # 'voice' is a property of getProperty
     voices = engine.getProperty('voices')
+    # for taking only one gender use the voice not voices and 0 is for male and 1,2 is for female 
     engine.setProperty('voice',voices[0].id)
-
+    # speed of voice can change using rate
     rate = engine.getProperty('rate')
     engine.setProperty('rate',150)
     engine.say(x)
