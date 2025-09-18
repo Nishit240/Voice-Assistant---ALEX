@@ -25,20 +25,21 @@ def sptext():
             print(data)
             return data
         except sr.UnknownValueError:
-            print("Not Understanding The Audio. ")
+            print("Not Understanding The Audio.")
+            return ""  # <-- return empty string
+        except sr.RequestError as e:
+            print(f"Could not request results; {e}")
+            return ""
 
 # # Calling the function
 # sptext()
 # print("End")
 
 def speechtx(x):
-    # init() is a class and this class has this function getProperty and setProperty
     engine = pyttsx3.init()
-    # 'voice' is a property of getProperty
     voices = engine.getProperty('voices')
-    # for taking only one gender use the voice not voices and 0 is for male and 1,2 is for female 
     engine.setProperty('voice',voices[0].id)
-    # speed of voice can change using rate
+
     rate = engine.getProperty('rate')
     engine.setProperty('rate',150)
     engine.say(x)
@@ -48,14 +49,14 @@ def speechtx(x):
 # speechtx("Hello Welcome to your Voice Assistant, My name is ALEX")
 
 if __name__ == '__main__':
-    print("Please say 'HEY ALEX' to start the voice assistant: ")
-    speechtx("Please say hey alex")
+    print("Please say 'Hello' to start the voice assistant: ")
+    speechtx("Please say Hello")
     count = 0
 
     while True:
         recognized_text = sptext()
         # Check if the returned text is not None before converting to lowercase
-        if recognized_text is not None and recognized_text.lower() == "hey alex":
+        if recognized_text is not None and recognized_text.lower() == "hello":
             speechtx("hello user")
             speechtx("please say your name")
 
@@ -72,7 +73,7 @@ if __name__ == '__main__':
                     speechtx(name)
 
                 elif "old are you" in data1 or "your age" in data1:
-                    age = "I am 1 month old "
+                    age = "I am 1 year old "
                     speechtx(age)
 
                 elif "time" in data1:
@@ -127,7 +128,7 @@ if __name__ == '__main__':
                     print(listphoto)
                     os.startfile(os.path.join(add,listphoto[0]))
 
-                elif "exit" in data1:
+                elif ("exit" or "bye" or "tata" or "bye-bye") in data1:
                     print(f"Thank You {user_name}")
                     speechtx(f"Thank You {user_name}" )
                     break
@@ -138,10 +139,10 @@ if __name__ == '__main__':
                 time.sleep(5)
 
         else:
-            print("Please say hey alex!!!")
-            speechtx("Please say hey alex")
+            print("Please say Hello!!!")
+            speechtx("Please say Hallo")
             count += 1
-            if count ==2:
+            if count ==10:
                 print("You have exited:")
                 break
             continue
