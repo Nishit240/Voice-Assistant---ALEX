@@ -39,7 +39,6 @@ def speechtx(x):
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
     engine.setProperty('voice',voices[0].id)
-
     rate = engine.getProperty('rate')
     engine.setProperty('rate',150)
     engine.say(x)
@@ -146,4 +145,5 @@ if __name__ == '__main__':
                 print("You have exited:")
                 break
             continue
+
 
