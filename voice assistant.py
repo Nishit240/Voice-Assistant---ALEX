@@ -141,8 +141,9 @@ if __name__ == '__main__':
         else:
             print("Please say Hello!!!")
             speechtx("Please say Hallo")
-            count += 1
-            if count ==10:
+            count =+ 1
+            if count == 2:
                 print("You have exited:")
                 break
             continue
+
