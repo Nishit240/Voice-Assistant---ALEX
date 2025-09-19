@@ -29,6 +29,16 @@ This Python script implements a versatile voice assistant named ALEX, featuring 
   pip install pyside6  
   ```
 
+## Screenshot 🖼️
+<img width="519" height="811" alt="Screenshot 2025-09-19 160214" src="https://github.com/user-attachments/assets/c76c5e42-012a-4d12-956e-bc60286e9d4c" />
+
+<img width="516" height="799" alt="Screenshot 2025-09-19 160224" src="https://github.com/user-attachments/assets/cad5353e-4ae1-4778-b20b-7789273017fc" />
+
+<img width="1435" height="1077" alt="Screenshot 2025-09-19 160310" src="https://github.com/user-attachments/assets/790dcdd8-be84-4661-a39e-6420e91e2c56" />
+
+<img width="1460" height="1079" alt="Screenshot 2025-09-19 160345" src="https://github.com/user-attachments/assets/0ddc47b7-40d5-4173-8f00-1eda765e71f9" />
+
+
 ## Usage 🚀
 
 1. **Clone the repository:**
