@@ -26,6 +26,7 @@ This Python script implements a versatile voice assistant named ALEX, featuring 
   pip install pyaudio
   pip install webbrowser
   pip install pyjokes
+  pip install pyside6  
   ```
 
 ## Usage 🚀
