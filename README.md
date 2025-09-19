@@ -40,13 +40,13 @@ This Python script implements a versatile voice assistant named ALEX, featuring 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd voice-assistant
+    cd alex_voice-assistant
     ```
 
 3. **Run the script:**
 
     ```bash
-    python voice_assistant.py
+    python alex_voice_assistant.py
     ```
 
 4. **Follow the on-screen instructions and say "HEY ALEX" to initiate the voice assistant.**
